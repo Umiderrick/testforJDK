@@ -49,7 +49,7 @@ public class LambdaTest {
 				.peek(e -> System.out.println("Filtered value: " + e)).map(String::toUpperCase)
 				.peek(e -> System.out.println("Mapped value: " + e)).collect(Collectors.toList());
 		List<Integer> integers = new ArrayList<>();
-		for (int i = 0; i < 100000; i++) {
+		for (int i = 1; i <= 100; i++) {
 			integers.add(i);
 		}
 		Integer sum = integers.stream().reduce(0, (a, b) -> a + b);
